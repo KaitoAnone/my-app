@@ -27,7 +27,7 @@ export function RichTextBlock({ block }: { block: RichTextBlock }) {
       <BlocksRenderer
         content={block.content}
         blocks={{
-          image: ({ image }: { image: ImageBlock }) => {
+          image: ({ image }: any) => {
             console.log("image", image);
             if (!image || !image.url) return null; // ตรวจสอบว่ามี URL ของรูปภาพ
             return (
